@@ -1,0 +1,85 @@
+body:before {
+  content: initial;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media screen and (min-width: 59.6875em) {
+  .site-content {
+    display: block;
+    float: right;
+    margin-right: 29.4118%;
+    margin-left: initial;
+    width: 70.5882%;
+  }
+  .sidebar {
+    float: right;
+    margin-left: -100%;
+    margin-right: initial;
+    max-width: 413px;
+    position: relative;
+    width: 29.4118%;
+    right: 0;
+  }
+  .site-footer {
+    float: right;
+    margin: 0 35.2941% 0 0;
+    padding: 0;
+    width: 58.8235%;
+  }
+  .header-cont {
+    height: 50px;
+    margin-bottom: 35px;
+  }
+  .site-header {
+    background-color: #2f6375;
+    border-bottom: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+  .site-header .site-title {
+    display: inline-block;
+    line-height: 70px;
+    width: 20%;
+  }
+  .site-header .site-title a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    display: inline-block;
+  }
+  .site-header .search-form {
+    width: 40%;
+    display: inline-block;
+  }
+  .site-header nav {
+    display: inline-block;
+    width: 39%;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .site-header nav ul {
+    display: inline-block;
+  }
+  .site-header nav ul li {
+    display: inline-block;
+  }
+  .site-header nav ul li a {
+    display: block;
+    color: #fff;
+  }
+  .container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
