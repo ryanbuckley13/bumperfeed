@@ -20,21 +20,21 @@
 	<![endif]-->
 	<script>(function(){document.documentElement.className='js'})();</script>
 	<?php wp_head(); ?>
-		<link rel="stylesheet" type="text/css" href="/wp-content/themes/bumperfeed/css/custom.css">
-
+	<link rel="stylesheet" type="text/css" href="/wp-content/themes/bumperfeed/css/custom.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,800,700,300' rel='stylesheet' type='text/css'>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 <div class="header-cont">
 		<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-		
+		<div class="site-branding container">
+
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php get_search_form(); ?>
 			<nav>
 				<ul>
-					<li><a href="">P</a></li>
+					<li><a href="">sP</a></li>
 					<li><a href="">M</a></li>
 					<li><a href="">FORUM</a></li>
 				</ul>

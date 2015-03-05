@@ -13,7 +13,6 @@ body, button, input, select, textarea {
 		width: 70.5882%;
 	}
 
-
 	.sidebar {
 		float: right;
 		margin-left: -100%;
@@ -39,11 +38,10 @@ body, button, input, select, textarea {
 		padding: 0;position: fixed;
 		width: 100%;
 		z-index: 100;
-
-
+		left: 0;
 
 		.site-title {
-			display: inline-block; 
+			display: inline-block;
 			line-height: 70px;
 			width: 20%;
 			a {
@@ -51,6 +49,9 @@ body, button, input, select, textarea {
 				text-decoration: none;
 				padding: 0 10px;
 				display: inline-block;
+				font-weight: 800;
+				text-transform: uppercase;
+				font-size: .8em;
 			}
 		}
 		.search-form {
@@ -75,13 +76,17 @@ body, button, input, select, textarea {
 				}
 			}
 		}
-
+		form .search-field {font-size: .9em;}
 	}
 
 	.container {
 		width: 100%;
-		max-width: 1100px;
+		  max-width: 1403px;
 		margin: 0 auto;
 	}
-
 }
+
+@media screen and (min-width: 77.5em){
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+  padding: 0.3278em;
+}}
