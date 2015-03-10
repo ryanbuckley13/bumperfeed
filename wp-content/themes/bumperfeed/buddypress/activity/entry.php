@@ -11,7 +11,8 @@
  */
 
 ?>
-here
+
+
 <?php do_action( 'bp_before_activity_entry' ); ?>
 
 <li class="<?php bp_activity_css_class(); ?>" id="activity-<?php bp_activity_id(); ?>">
