@@ -19,6 +19,8 @@
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
 	<script>(function(){document.documentElement.className='js'})();</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="/wp-content/themes/bumperfeed/js/main.js"></script>
 	<?php wp_head(); ?>
 		<link rel="stylesheet" type="text/css" href="/wp-content/themes/bumperfeed/css/custom.css">
 
@@ -34,9 +36,9 @@
 			<?php get_search_form(); ?>
 			<nav>
 				<ul>
-					<li><a href="">P</a></li>
-					<li><a href="">M</a></li>
-					<li><a href="">FORUM</a></li>
+				<?php my_bp_adminbar_notifications_menu()?>
+					<li><a href="<? echo bp_loggedin_user_domain().'messages/'; ?>">m <span><?php bp_total_unread_messages_count() ?></span></a></li>
+					<li><a href="/forums/">FORUM</a></li>
 				</ul>
 			</nav>
 		</div><!-- .site-branding -->

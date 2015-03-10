@@ -82,4 +82,32 @@ textarea {
     max-width: 1100px;
     margin: 0 auto;
   }
+  #top-notification {
+    position: relative;
+  }
+  #top-notification ul {
+    display: none;
+    position: absolute;
+    width: 420px;
+    right: 0;
+    top: 100%;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.52);
+  }
+  #top-notification ul li a {
+    color: #333;
+    font-size: 0.7em;
+  }
+  .entry-content,
+  .entry-summary {
+    padding: 0;
+  }
+  .hentry {
+    background: transparent;
+  }
+  #buddypress ul.item-list li {
+    background: #fff;
+    padding: 1em;
+  }
 }
