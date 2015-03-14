@@ -345,8 +345,8 @@ global $bp;
 if ( !is_user_logged_in() )
     return false;
 
-echo '<li id="top-notification">';
-_e( 'Alerts', 'buddypress' );
+echo '<li id="top-notification"><i class="md-notifications md-lg"></i>';
+_e( '', 'buddypress' );
 
 if ( $notifications = bp_core_get_notifications_for_user( $bp->loggedin_user->id ) ) { ?>
     <span><?php echo count( $notifications ) ?></span>

@@ -23,6 +23,8 @@
 	<script src="/wp-content/themes/bumperfeed/js/main.js"></script>
 	<?php wp_head(); ?>
 		<link rel="stylesheet" type="text/css" href="/wp-content/themes/bumperfeed/css/custom.css">
+		<link rel="stylesheet" type="text/css" href="/wp-content/themes/bumperfeed/css/material-design-iconic-font.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -32,13 +34,16 @@
 		<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 		
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/themes/bumperfeed/img/logo.png"></a></h1>
 			<?php get_search_form(); ?>
 			<nav>
 				<ul>
-				<?php my_bp_adminbar_notifications_menu()?>
-					<li><a href="<? echo bp_loggedin_user_domain().'messages/'; ?>">m <span><?php bp_total_unread_messages_count() ?></span></a></li>
+					<?php my_bp_adminbar_notifications_menu()?>
+				
+					<li><a href="<? echo bp_loggedin_user_domain().'messages/'; ?>"><i class="md-messenger md-lg"></i><span class="messages"><?php if ( messages_get_unread_count() > 0) {echo messages_get_unread_count();} ?></span></a>	</li>
 					<li><a href="/forums/">FORUM</a></li>
+
+
 				</ul>
 			</nav>
 		</div><!-- .site-branding -->
