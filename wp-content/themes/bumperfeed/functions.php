@@ -336,3 +336,50 @@ function my_login_stylesheet() {
     wp_enqueue_script( 'custom-login', get_template_directory_uri() . '/style-login.js' );
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
+
+
+function my_bp_adminbar_notifications_menu() {
+global $bp;
+
+if ( !is_user_logged_in() )
+    return false;
+
+echo '<li id="top-notification"><i class="md-notifications md-lg"></i>';
+_e( '', 'buddypress' );
+
+if ( $notifications = bp_core_get_notifications_for_user( $bp->loggedin_user->id ) ) { ?>
+    <span><?php echo count( $notifications ) ?></span>
+<?php
+}
+
+echo '</a>';
+echo '<ul>';
+
+if ( $notifications ) {
+    $counter = 0;
+    for ( $i = 0; $i < count($notifications); $i++ ) {
+        $alt = ( 0 == $counter % 2 ) ? ' class="alt"' : ''; ?>
+
+        <li<?php echo $alt ?>><?php echo $notifications[$i] ?></li>
+
+        <?php $counter++;
+    }
+} else { ?>
+
+    <li><a href="<?php echo $bp->loggedin_user->domain ?>"><?php _e( 'You have no new alerts.', 'buddypress' ); ?></a></li>
+
+<?php
+}
+
+echo '</ul>';
+echo '</li>';
+}
+
+add_action('after_setup_theme', 'remove_admin_bar');
+	function remove_admin_bar() {
+	if (!current_user_can('administrator') && !is_admin()) {
+	  show_admin_bar(false);
+	}
+}
+

@@ -1,5 +1,9 @@
 <?php do_action( 'bp_before_directory_activity' ); ?>
+<<<<<<< HEAD
 here2
+=======
+
+>>>>>>> 00745e9e0d9b7aff4cab1afe59368083577ac26e
 <div id="buddypress">
 
 	<?php do_action( 'bp_before_directory_activity_content' ); ?>

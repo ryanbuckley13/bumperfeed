@@ -11,6 +11,11 @@
  */
 
 ?>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 00745e9e0d9b7aff4cab1afe59368083577ac26e
 <?php do_action( 'bp_before_activity_entry' ); ?>
 
 <li class="<?php bp_activity_css_class(); ?>" id="activity-<?php bp_activity_id(); ?>">
